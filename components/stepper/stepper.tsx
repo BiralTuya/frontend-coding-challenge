@@ -1,13 +1,10 @@
+import { Step } from "./steps"
+
 interface StepperProps {
     currentStep: number
     totalSteps: number
     steps: Step[]
 }
-
-interface Step {
-    title: string
-}
-
 export default function Stepper({ currentStep, steps }: StepperProps) {
     return (
         <div className="flex items-center justify-center">

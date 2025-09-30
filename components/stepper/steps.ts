@@ -1,4 +1,4 @@
-interface Step {
+export interface Step {
     title: string
 }
 
