@@ -39,7 +39,12 @@ export default function Stepper({ currentStep, steps }: StepperProps) {
                 return (
                     <div key={step.title} className="flex items-center">
                         <div className="flex flex-col items-center">
-                            <div className={circleClasses}>{index + 1}</div>
+                            <div
+                                className={circleClasses}
+                                aria-current={isActive ? "step" : "false"}
+                            >
+                                {index + 1}
+                            </div>
                             <p className={textClasses}>{step.title}</p>
                         </div>
 
