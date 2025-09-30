@@ -8,7 +8,7 @@ import { steps } from "../components/stepper/steps"
 import useStepper from "../hooks/useStepper"
 
 export default function Home() {
-    const { currentStep, handleNextStep, totalSteps } = useStepper()
+    const { currentStep, handleNextStep, totalSteps, isLastStep } = useStepper()
     return (
         <>
             <Header />
@@ -21,7 +21,7 @@ export default function Home() {
                     />
                 </StepperWrapper>
                 <ButtonWrapper>
-                    <Button onClick={handleNextStep}>Next</Button>
+                    {!isLastStep() && <Button onClick={handleNextStep}>Next</Button>}
                 </ButtonWrapper>
             </MainWrapper>
         </>

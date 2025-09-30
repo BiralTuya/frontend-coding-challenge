@@ -13,6 +13,9 @@ export default function useStepper() {
             return prev
         })
     }
+	function isLastStep() {
+		return currentStep === totalSteps - 1;
+	}
 
-    return { currentStep, handleNextStep, steps, totalSteps }
+    return { currentStep, handleNextStep, steps, totalSteps, isLastStep }
 }
